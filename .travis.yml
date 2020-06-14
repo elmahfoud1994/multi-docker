@@ -11,7 +11,7 @@ after_success:
   - docker build -t bouatimelmahfoud/multi-worker ./worker
   - docker build -t bouatimelmahfoud/multi-nginx ./nginx
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push bouatimelmahfoud/multi-client ./client
-  - docker push bouatimelmahfoud/multi-server ./server
-  - docker push bouatimelmahfoud/multi-worker ./worker
-  - docker push bouatimelmahfoud/multi-nginx ./nginx
+  - docker push bouatimelmahfoud/multi-client 
+  - docker push bouatimelmahfoud/multi-server
+  - docker push bouatimelmahfoud/multi-worker 
+  - docker push bouatimelmahfoud/multi-nginx 
