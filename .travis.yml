@@ -10,7 +10,7 @@ after_success:
   - docker build -t bouatimelmahfoud/multi-server ./server
   - docker build -t bouatimelmahfoud/multi-worker ./worker
   - docker build -t bouatimelmahfoud/multi-nginx ./nginx
-  - echo "$docker_password" | docker login -u "$Docker_id" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push bouatimelmahfoud/multi-client ./client
   - docker push bouatimelmahfoud/multi-server ./server
   - docker push bouatimelmahfoud/multi-worker ./worker
